@@ -2,21 +2,26 @@
 
 ## A generic ticket based support system for resolving queries on a platform Using Mean Stack<br/>
 <br/>
+
 ## Project Description :<br/>
 Support is an essential feature for any platform, and dedicated support is best approach in case you are really concerned <br/>
 about the user experience of your platform. The Aim of the project is to create an online ticket based support system,<br/> 
 which should be usable by any kind of platform to get support queries from their users and resolve them.<br/>
 <br/>
+
 ## Frontend Technologies : <br/>
 HTML 5, CSS, Javascript , Jquery and AngularJS <br/>
 <br/>
+
 ## Backend Technologies : <br/>
 NodeJs, ExpressJS, MongoDB. <br/>
 <br/>
+
 ## Features of this application: <br/>
 1.Ticket Raising panel - User facing <br/>
 2.Ticket Resolution panel - Admin <br/>
 <br/>
+
 ## 1.Ticket Raising Panel - User Facing : <br/>
  1.Login and Signup - User Can Login or Signup By Entering Correct Credentials. <br/>
  2.Forgot Password -If User forgot password They can Reset password <br/>
