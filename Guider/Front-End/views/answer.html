@@ -1,0 +1,142 @@
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<div ng-controller="singleCtrl as single">
+<nav class="navbar fixed-top navbar-toggleable-md navbar-inverse bg-inverse">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarExample" aria-controls="navbarExample" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="container">
+             <a class="navbar-brand" href="#/"></i> Guider</a>
+            <div class="collapse navbar-collapse pull-right" id="navbarExample">
+            </div>
+           
+            <ul align="right" class="nav navbar-nav pull-right">
+          <button align="right" type="button"  style="margin:0px" class="btn3 btn-self1 btn-logged btn-outline btn-xl dropdown-toggle fa fa-user" ng-init="single.getName()" id="logout" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+   {{single.user}}<span class="caret"></span></button>
+
+          <ul  class="dropdown-menu btn-outline">
+            <li align="center"><a href="" ng-click="single.logout()"><h4 style="color:white;width: 200px;" ><i class="fa fa-sign-out"></i> Logout</h4></a></li>
+          </ul>
+        </ul>
+         
+      </div>
+</nav>
+    
+<section class="section-back " >
+<div class="container">
+    <div class="row">
+        <div class="col-lg-offset-2 col-lg-10 col-md-offset-10 col-md-10 col-sm-offset-2 col-sm-8 col-xs-offset-2 col-xs-10 text" id="query">
+                <div id="title">
+                    <h2 align="center">                <a href="#" align="center"  title="Previous Page" onclick="history.go(-1);event.preventDefault();" style="font-size:16px;"><i class="fa fa-long-arrow-left"> Go Back</i></a></h2>
+                </div>
+	
+				<div  id="btnChangeStatus" class="navbar-toggler-right">
+                 <a align="center" class="btn3 btn-outline btn-xl"  ng-if="single.userId == single.userID || single.user == 'Admin'"  ng-click="single.openclose()">{{single.getStatus()}}</a>
+					
+                </div><br/><br/>
+                <hr>
+					
+				<div class="row bg-fad p-4 my-4">
+				<div class="col-lg-1" ng-init="single.getName()">
+				
+			    <ng-avatar initials="{{single.user[0]}}" bg-color="#00A350" round-shape="true" ></ng-avatar> 
+	
+				</div>
+				<div class="col-lg-8">
+				<h5 style="font-size:16px;">Posted by<span style="color:#3498DB;"> {{single.sender}}</span></h5>
+                <h6><div class="datetime" style="font-size:12px;">{{single.date | date: "MMM dd,y"}} at {{single.date | date: "HH:mm"}}</div></h6>
+					
+				<label style="color:#ff0000; font-family:bold; font-size: 2em;" align="center"> 
+                {{single.title}}</label> <br>
+                <label style="color:black; font-family: bold; font-size: 1.2em;" align="center"> 
+                        {{single.Details}}</label><br>
+				</div>
+				</div>	
+				<hr size="30%">
+				  
+                <br/>
+                <h4 ng-if="single.messages.length>0" align="center">Answers</h4>
+                <br/>
+			</div>
+            
+            
+            
+        <hr/>
+<div class="col-lg-offset-2 col-lg-10 col-md-offset-10 col-md-10 col-sm-offset-2 col-sm-8 col-xs-offset-2 col-xs-10 text">
+        <ul class="navbar-nav" ng-repeat="message in single.messages">
+            <li ng-class="{'message':{{message.sender !== 'Admin'}} , 'messageadmin': {{message.sender === 'Admin'}} }" id="scrollB">
+                    <div class="bg-fad p-4 my-4">
+					<div class="container">
+					 <div class="row">	
+						
+                          <div class="col-lg-1">
+						   <ng-avatar initials="{{message.sender[0]}}" bg-color="#29B6F6" round-shape="true" ></ng-avatar> 
+						  </div>
+						    <div class="col-lg-11">
+                               Posted By<span style="color:#3498DB;font-size:16px;"> {{message.sender}}</span> 
+                            <div class="datetime" style="font-size:11px;">{{message.createdAt | date: "MMM dd,y"}} at {{message.createdAt | date: "HH:mm"}}</div>
+                            <br/>	
+
+                            <div class="msgtext"> {{message.queryText}} </div>
+				
+                           </div> 
+							<br>
+							<br>
+							
+						</div>
+					</div>
+				   </div>
+            </li>
+        </ul>
+</div>
+
+        <form id="replyform" ng-submit="single.createMessage()">
+                    <label style="color:black; font-family: bold; font-size: 1.5em;">Answer This Question</label>
+					
+				
+			<div class="bg-fad p-4 my-4">
+				<div class="row">
+						<div class="col-lg-1">
+							<i class="w3-xxxlarge fa fa-pencil"></i>
+						</div>	
+						<div class="col-lg-11 mx-auto">
+							<div class="form-group">
+								<textarea id="messageText"  class="form-control" rows="4" cols="87" name="queryText" placeholder="Message..." ng-model="single.queryText" required="true"></textarea>
+							</div>
+					  </div>    
+                </div>
+			</div>
+                    
+                    <br/>
+				  <div id="sendButton" >
+                        <button align="center" id="sendbtn" type="submit" name="send" value="send" data-toggle="tooltip" title="Post Your Answer" class="btn3 btn-outline btn-xl btn-self3 btn fa fa-check"> Post Answer</button>
+                    </div>
+
+                    
+
+                    <br/>
+        </form>
+
+
+
+
+    </div>
+</div>
+</section>
+
+</div>
+</div>
+<!--Footer-->    
+ <footer class="py-2 bg-inverse hi">
+  <div class="container">
+    <p class="m-0 text-center text-white text-align">&copy; www.Guider.Com 2018. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script type="text/javascript">
+    // <![CDATA[
+    function goBack() {
+           window.history.back();
+           return false;
+                    }
+</script>

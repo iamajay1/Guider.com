@@ -1,0 +1,244 @@
+/*!
+ * Start Bootstrap - Busines Frontpage (http://startbootstrap.com/template-overviews/business-frontpage)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-business-frontpage/blob/master/LICENSE)
+ */
+
+body {
+    padding-top: 54px;
+}
+
+@media (min-width: 992px) {
+    body {
+        padding-top: 56px;
+    }
+}
+
+.business-header {
+    height: 50vh;
+    min-height: 300px;
+    background: url('http://placehold.it/1920x400') center center no-repeat scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.card {
+    height: 100%;
+}
+
+.navbar-toggler {
+        z-index: 1;
+    }
+    
+    @media (max-width: 576px) {
+        nav > .container {
+            width: 100%;
+        }
+        .container {
+    width: auto  !important; 
+    max-width: 100%;
+}
+    }
+
+
+.business-header {
+     height: auto !important; 
+    background: url(http://placehold.it/1920x400) center center no-repeat scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+.masthead {
+  min-height: 541px;
+  position: relative;
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 25px;
+  color: white;
+  background: url("../images/red-pattern.jpg"), #7b4397;
+  background: url("../images/red-pattern.jpg"), -webkit-linear-gradient(to left, #7b4397, #dc2430);
+  background: url("../images/red-pattern.jpg"), linear-gradient(to left, #7b4397, #dc2430);
+}
+.btn-outline {
+  color: white;
+  border: 1px solid;
+  border-color: white;
+}
+
+.btn-outline:hover, .btn-outline:focus, .btn-outline:active, .btn-outline.active {
+  color: white;
+  border-color: #009688;
+  background-color: #009688;
+}
+
+.btn1 {
+  border-radius: 10px;
+  font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';
+  letter-spacing: 1px;
+  	
+  text-transform: uppercase;
+  margin-left:163px;
+  width: 125px;
+}
+.btn2 {
+  background:transparent;	
+  border-radius: 100px;
+  font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';
+  letter-spacing: 2px;
+  text-transform: uppercase;	
+}
+.btn3 {
+  		
+  background:transparent;	
+  border-radius: 5px;
+  font-size:12px;
+  cursor:pointer;		
+}
+.btn4 {
+  border-radius:7px;		
+  letter-spacing: 1px;
+  width:300px; 	
+  cursor:pointer;		
+}
+.btn-self{	
+	width:350px;
+	
+}
+.btn-self1{	
+	width:200px;
+	
+}
+.btn-self3{
+	margin-left:600px;
+	width:320px;
+}
+
+
+.btn-xl {
+  font-size: 11px;
+  padding: 15px 21px;
+
+}
+.bg-fad {
+  background-color: rgb(255,255,255);
+  width:80%;	
+ 	
+ }
+@media (min-width: 300px) and (max-width:500px) {
+.btn1 {
+  border-radius: 10px;
+  font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-left:80px;
+  width: 100px;
+}
+.modal-title{
+	margin-left:80px;
+	width:100%
+}
+.btn-self3{
+	margin-left:2px;
+
+}
+.btn-self{	
+	width:300px;
+	
+}
+}
+
+  
+  element.style {
+    margin: 0px;
+}
+hr.style1 {
+    border-top: 5px solid #8c8b8b;
+	height: 10px;
+	border: 0;
+	box-shadow: 0 10px 10px -10px #8c8b8b inset;
+}
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: auto !important;
+
+    display: none;
+    float: left;
+    min-width: 13rem !important;
+    padding: .5rem 0;
+    margin: .125rem 0 0;
+    font-size: 1rem;
+    color: #292b2c;
+    text-align: center;
+    list-style: none;
+    background-color:white;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 10px;
+
+	}
+
+.section-back {
+    display: block;
+    min-height: 541px;
+    margin: 0px auto;
+    padding: 10%;
+    width: 100%;
+    border: 2px solid #464a4c !important;
+	
+    background-color: #ddd !important;
+    text-align: left;
+    padding: 10px;
+	background: url("../images/q-back.jpg"), #7b4397;
+	background: url("../images/q-back.jpg"), -webkit-linear-gradient(to left, #7b4397, #dc2430);
+	background: url("../images/q-back.jpg"), linear-gradient(to left, #7b4397, #dc2430);
+    /* opacity: 0.6; */
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%; 
+    z-index: 1000;
+	
+    display: none;
+    min-width: 10rem !important;
+    padding: .5rem 0;
+    margin: .125rem 0 0;
+    font-size: 1rem;
+    color: #00000;
+    text-align: center;
+    list-style: none;
+	background-color:transparent !important;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 10px;
+}
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}

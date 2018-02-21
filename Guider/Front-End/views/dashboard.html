@@ -1,0 +1,125 @@
+
+
+<div ng-controller="dashCtrl as dashboard">
+<nav class="navbar fixed-top navbar-toggleable-md navbar-inverse bg-inverse">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarExample" aria-controls="navbarExample" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="container">
+             <a class="navbar-brand" href="#/"></i> Guider</a>
+            <div class="collapse navbar-collapse pull-right" id="navbarExample">
+            </div>
+			<h5 align="right" class="text-white">Welcome!</h5> &nbsp; &nbsp;
+            <ul align="right" class="nav navbar-nav pull-right">
+				 
+		  <button align="right" type="button"  style="margin:0px" class="btn3 btn-self1 btn-logged btn-outline btn-xl dropdown-toggle fa fa-user" ng-init="dashboard.getName()" id="logout" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    {{dashboard.user}}<span class="caret"></span></button>	 
+   
+          <ul  class="dropdown-menu btn-outline">
+            <li align="center"><a href="" ng-click="dashboard.logout()"><h4 style="color:white;width: 200px;" ><i class="fa fa-sign-out"></i> Logout</h4></a></li>
+          </ul>
+	
+        </ul>
+         
+      </div>
+</nav>
+
+	 
+<!-- Middle Section--->
+<section class="section-back" ng-init="dashboard.open()">
+
+  <br>
+  <br>
+		
+  <!-- heading section -->
+  <div  ng-if="dashboard.queries.length===0" class="container text-left">
+	<hr>
+	<br>
+    <div  id="noquery">
+				<div class="dropdown">	
+
+		<button class="btn4 btn-success btn-xl dropdown-toggle " type="button" data-toggle="dropdown">Chose Questions Open/Close
+  <span class="caret"></span></button>
+
+<ul  class="dropdown-menu" >          
+			<li><button class="btn4 btn-success btn-xl fa fa-inbox" ng-click="dashboard.allUserQueries()"> Open</li></button>
+		<li><button class="btn4 btn-success btn-xl fa fa-times-circle-o" ng-click="dashboard.allUserQueriesC()"> Closed</button></li>
+</ul>
+			<button ng-if="dashboard.user !== 'Admin' dashboard.user !== ' ' " class="btn3 btn-outline btn-xl fa fa-question-circle-o " ng-click="dashboard.all()"> My Questions</button>	        
+				<a href="#/create/{{dashboard.userId}}" class="btn3 btn-outline btn-xl fa fa-plus-square"  ng-if="dashboard.user !== 'Admin' && dashboard.user !== ' '" >  New Discussion </a>   
+</div>
+<br><hr><br><br>
+      <h2 class="text-center text-white">No Questions Here</h2>
+    
+	</div>
+  </div>
+
+
+  <div  ng-if="dashboard.queries.length>0" class="container">
+    <!-- filter box -->
+		<hr><br>
+    
+    <div>
+      
+      <!-- Filter Buttons -->
+
+		<div class="dropdown">	
+
+		<button class="btn4 btn-success btn-xl dropdown-toggle " type="button" data-toggle="dropdown" ng-click="dashboard.allQueries()">Chose Questions Open/Close
+  <span class="caret"></span></button>
+
+<ul  class="dropdown-menu" >          
+			<li><button class="btn4 btn-success btn-xl fa fa-inbox" ng-click="dashboard.allUserQueries()"> Open</li></button>
+		<li><button class="btn4 btn-success btn-xl fa fa-times-circle-o" ng-click="dashboard.allUserQueriesC()">Closed</button></li>
+</ul>
+	  <button ng-if="dashboard.user !== 'Admin'" class="btn3 btn-outline btn-xl fa fa-question-circle-o " ng-click="dashboard.all()"> My Questions</button>	        
+	  <a href="#/create/{{dashboard.userId}}" class="btn3 btn-outline btn-xl fa fa-plus-square"  ng-if="dashboard.user !== 'Admin' && dashboard.user !== ' '" >  New Discussion </a>   
+</div>
+
+			
+			<br><hr>
+    </div>
+	<!--query cards start  -->
+	<input class="form-control bg-fad" id="filter"  type="search" ng-model="searchText" placeholder="Search..." aria-label="Filter Queries" />
+	<div class="bg-fad">
+	<div  ng-repeat="query in dashboard.queries| filter: searchText">
+	<div class="center-block">
+	  <div class="bg-fad p-2 my-3">
+			
+			<div style="padding-left:50px;">
+				<div class = "panel-heading"><a  style="color:black;" href="#/query/{{query.ticketNumber}}/{{query.userId}}">
+	        <b style="color:#ff0000;font-size:20px;">{{query.queryTitle}}</b></a> 
+				</div>
+                                   <div class="datetime">{{query.name}} on <span style="color:blue">{{query.createdAt | date: "MMM dd,y"}}</span></div>
+                <br/>
+
+	    <div  class="panel-footer">
+				<div class="center-block">
+		      <a href="" ng-if="dashboard.userId == query.userId " ng-click="dashboard.deleteQuery(query.ticketNumber , $index)" data-toggle="tooltip" title="Delete" class="btn-primary btn-sm">
+				  <span class="fa fa-trash-o" aria-hidden="true" ></span> </a>
+	      <a href="" ng-if="dashboard.userId == query.userId" class="btn-primary btn-sm" ng-click="dashboard.openclose(query.ticketNumber)">{{dashboard.getStatus($index)}}</a>
+
+		  </div>
+		</div>
+		</div>
+		</div>
+    <hr class="style1">
+		</div>
+		
+	</div>
+	</div>
+	
+</div>
+	<!-- query card end -->
+</div>
+
+</section>
+<!--Middle Section end-->
+</div>
+
+<!--Footer-->    
+ <footer class="py-2 bg-inverse hi">
+  <div class="container">
+    <p class="m-0 text-center text-white text-align">&copy; www.Guider.Com 2018. All Rights Reserved.</p>
+  </div>
+</footer>

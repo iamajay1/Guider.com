@@ -1,0 +1,51 @@
+
+
+<div ng-controller='indexCtrl as index'>
+    <nav class="navbar navbar-nav navbar-collapse fixed-top navbar-toggleable-md navbar-inverse bg-inverse" >
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarExample" aria-controls="navbarExample" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="container">
+            <a class="navbar-brand" href="#/"></i> Guider</a>
+            <div class="collapse navbar-collapse" id="navbarExample">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a Style="color:white;" class="nav-link" href="#/"><i class="fa fa-home" aria-hidden="true"></i> Home<span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+	 
+<!-- Middle Section--->
+<section class="section-back  text-center">
+					<br><br><br>
+
+					<div class="modal-dialog row">
+					<h4 class="mb-5 text-white"> Don't Worry Just Enter Your Details</h1>
+					<div class="bg-fad p-4">
+							
+						<form role="form" method="post" ng-submit="index.forgotLog()"> 
+							<div class="form-group">
+								<input type="email" class="form-control" placeholder="Email" name="email" ng-model="index.email" required = "true">
+							</div>
+							<div class="form-group">
+								<input type="text" class="form-control"  placeholder="Enter Your Registered Mobile Number" name="mobileNumber" ng-model="index.mobileNumber" required = "true">
+							</div>
+
+						    <button type="submit" name="submit" class="btn btn-xl btn-primary">Next</button>
+						</form>
+					</div>
+					</div>
+</section>
+</div>
+<!--Middle Section end-->
+
+
+<!--Footer-->    
+ <footer class="py-2 bg-inverse hi">
+  <div class="container">
+    <p class="m-0 text-center text-white text-align">&copy; www.Guider.Com 2018. All Rights Reserved.</p>
+  </div>
+</footer>

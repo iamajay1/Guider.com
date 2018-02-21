@@ -1,0 +1,32 @@
+{
+  "name": "SupportApp",
+  "version": "1.0.0",
+  "description": "Single Page Application For Ticket Based Support System",
+  "main": "app.js",
+  "keywords": [
+    "support",
+    "questions",
+    "MEAN",
+    "node.js",
+    "angular js",
+    "Express.s"
+  ],
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.17.2",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.3",
+    "express": "^4.15.3",
+    "express-jwt": "*",
+    "express-session": "^1.15.3",
+    "fs": "0.0.1-security",
+    "helmet": "^3.11.0",
+    "method-override": "^2.3.9",
+    "mongoose": "^4.10.5",
+    "morgan": "^1.8.2",
+    "nodemailer": "^4.4.2",
+    "path": "^0.12.7",
+    "shortid": "^2.2.8",
+    "xoauth2": "^1.2.0"
+  }
+}

@@ -1,0 +1,56 @@
+
+        <div ng-controller="createCtrl as create">
+<nav class="navbar fixed-top navbar-toggleable-md navbar-inverse bg-inverse">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarExample" aria-controls="navbarExample" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="container">
+            <a class="navbar-brand" href="#/"></i> Guider</a>
+            <div class="collapse navbar-collapse pull-right" id="navbarExample">
+            </div>
+           
+         <ul class="nav navbar-nav pull-right">
+          <button align="right" type="button"  style="margin:7px" class="btn3 btn-self1 btn-logged btn-outline btn-xl dropdown-toggle fa fa-user" ng-init="create.getName()" id="logout" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    {{create.user}}<span class="caret"></span></button>
+
+		  <ul  class="dropdown-menu btn-outline">
+            <li align="center"><a href="" ng-click="create.logout()"><h4 style="color:white;width: 200px;" ><i class="fa fa-sign-out"></i> Logout</h4></a></li>
+          </ul>
+        </ul>
+      </div>
+</nav>        
+
+            <!-- heading section -->
+	<section class="section-back">   
+ <div class="container content">
+
+<div class="col-lg-offset-1 col-lg-10 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 col-xs-offset-1 col-xs-10">
+
+<h3 align="center"> </h3>
+        <div>
+  <form name="createForm" class="col-lg-offset-1 col-lg-10 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 col-xs-offset-1 col-xs-10">
+    <label for="fname"> Title - </label>
+		
+    <input submit-required="true" type="text" class="form-control" required="true" id="fname" name="title" ng-model="create.queryTitle" placeholder="Enter Question Title">
+   
+    <label for="lname"> Details - </label>
+    <textarea submit-required="true" required="true" class="form-control" row="5" id="lname" name="title" ng-model="create.queryDetails" placeholder="Enter Your Question in Details"> </textarea><br/>
+	
+	<a href="#/dashboard/{{create.userId}}" class="text-white"> <button class="btn3 btn-outline btn-xl btn-self fa fa-times" style="font-size:16px;"> Cancel </button></a> &nbsp; &nbsp;
+    <a href="#/dashboard/{{create.userId}}"><button ng-disabled = "createForm.$invalid" type="submit" ng-click="create.createQuery()" data-toggle="tooltip" title="Please enter some details first" class="btn3 btn-outline btn-xl btn-self btn fa fa-check" style="font-size:16px;"> Post Question </button></a>
+	
+  </form>
+
+  </div>
+</div>
+
+</div>
+</section>
+<!--Footer-->    
+ <footer class="py-2 bg-inverse hi">
+  <div class="container">
+    <p class="m-0 text-center text-white text-align">&copy; www.Guider.Com 2018. All Rights Reserved.</p>
+  </div>
+</footer>
+
+</div>
