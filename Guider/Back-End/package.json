@@ -19,7 +19,6 @@
     "express": "^4.15.3",
     "express-jwt": "*",
     "express-session": "^1.15.3",
-    "fs": "0.0.1-security",
     "helmet": "^3.11.0",
     "method-override": "^2.3.9",
     "mongoose": "^4.10.5",
