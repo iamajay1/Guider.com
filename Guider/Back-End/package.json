@@ -1,18 +1,1 @@
-{
-  "name": "SupportApp",
-  "version": "1.0.0",
-  "description": "Single Page Application For Ticket Based Support System",
-  "main": "app.js",
-  "keywords": [
-    "support",
-    "questions",
-    "MEAN",
-    "node.js",
-    "angular js",
-    "Express.s"
-  ],
-  "dependencies": {
-    "body-parser": "^1.17.2",
-    "cookie-parser": "^1.4.3"   
-  }
-}
+
